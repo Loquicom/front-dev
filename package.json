@@ -1,0 +1,26 @@
+{
+  "name": "norauto-maintenance",
+  "version": "1.0.0",
+  "description": "Maintenance Portail Pro Norauto",
+  "main": "main.js",
+  "scripts": {
+    "prepare": "npm run css",
+    "start": "node main.js",
+    "web": "http-server ./src/ -p 8000 -o ./ -c-1",
+    "css": "npm run css-grid && npm run css-style",
+    "css-grid": "node-sass --output-style compressed src/css/scss/simple-grid.scss > src/css/simple-grid.min.css",
+    "css-style": "node-sass --output-style compressed src/css/scss/style.scss > src/css/style.min.css",
+    "package": "node main.js -z"
+  },
+  "author": "Nextoo",
+  "dependencies": {
+    "bestzip": "^2.1.5",
+    "chokidar": "^3.3.1",
+    "commander": "^5.0.0",
+    "copy-dir": "^1.2.0",
+    "del": "^5.1.0",
+    "http-server": "^0.12.3",
+    "node-sass": "^4.14.1",
+    "portfinder": "^1.0.25"
+  }
+}
